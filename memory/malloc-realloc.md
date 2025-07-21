@@ -27,7 +27,6 @@
    * permita que o usuário **adicione mais notas a um aluno** individualmente (use `realloc`)
    * exiba a média de cada aluno
 
---!
 6. **crie um vetor de strings (char\*\*).**
    * o usuário informa quantos nomes serão cadastrados.
    * para cada nome, aloque memória suficiente com `malloc`.
@@ -36,16 +35,16 @@
 
 ---
 
-### 🧪 **Nível 3 – Casos mistos com realloc (desafiador)**
+### **nível 3 – casos mistos com realloc (desafiador)**
 
-7. **Crie um sistema de listas dinâmicas em 2D:**
+--!
+7. **crie um sistema de listas dinâmicas em 2D:**
+   * comece com uma matriz `n x m` inicial.
+   * o usuário pode:
 
-   * Comece com uma matriz `n x m` inicial.
-   * O usuário pode:
-
-     * Adicionar linhas (`realloc` do ponteiro externo).
-     * Adicionar colunas em uma linha específica (`realloc` do ponteiro interno).
-   * Sempre que a matriz mudar, imprima o novo estado.
+     * adicionar linhas (`realloc` do ponteiro externo).
+     * adicionar colunas em uma linha específica (`realloc` do ponteiro interno).
+   * sempre que a matriz mudar, imprima o novo estado.
 
 8. **Faça um programa que simule um "editor de pixels":**
 
