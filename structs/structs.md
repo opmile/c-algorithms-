@@ -14,21 +14,19 @@
 
 #### 2. **busca de maior valor em um vetor de structs**
 > dado um array de `struct Produto { char nome[50]; float preco; }`, encontre o produto mais caro.
-> Faça isso com uma função que receba o vetor e retorne um ponteiro para o produto mais caro.
+> faça isso com uma função que receba o vetor e retorne um ponteiro para o produto mais caro.
 
 ---
 
-#### 3. **Contar Palavras com Struct**
-
-> Crie uma função que recebe uma string e conta a frequência de cada palavra, armazenando em uma `struct Palavra { char texto[50]; int freq; }`.
-> Armazene todas as palavras diferentes em um vetor de `struct Palavra` dinâmico.
-> Requer **comparação, alocação e contagem lógica.**
+#### 3. **contar palavras com struct** (pedir ref)
+> crie uma função que recebe uma string e conta a frequência de cada palavra, armazenando em uma `struct Palavra { char texto[50]; int freq; }`
+> armazene todas as palavras diferentes em um vetor de `struct Palavra` dinâmico
+> requer **comparação, alocação e contagem lógica.**
 
 ---
 
-#### 4. **Agrupamento por Categoria**
-
-> Dado um vetor de `struct Livro { char titulo[50]; char categoria[30]; }`, separe os livros por categoria em diferentes vetores.
+#### 4. **agrupamento por categoria**
+> dado um vetor de `struct Livro { char titulo[50]; char categoria[30]; }`, separe os livros por categoria em diferentes vetores.
 > Exemplo: livros de “ficção” num vetor, “biografia” em outro etc.
 > **Pede: lógica de agrupamento + comparação entre strings.**
 
