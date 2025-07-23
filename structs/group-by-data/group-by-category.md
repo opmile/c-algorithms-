@@ -34,7 +34,7 @@ void groupByCategory(Livro *livros, int totalLivros) {
 
     // vetor de ponteiro para Livro (um vetor por categoria)
     Livro **livrosPorCategoria = malloc(totalCategorias * sizeof(Livro*));
-    int *quantidades = callos(totalCategorias, sizeof(int)); // livros por categoria
+    int *quantidades = calloc(totalCategorias, sizeof(int)); // livros por categoria
 
     if (!livrosPorCategoria || !quantidades) {
         printf("impossível alocar memória!");
@@ -163,6 +163,44 @@ void agruparPorCategoria(Livro *l, totalLivros) {
         free(categorias[i].livros);
     }
     free(categorias);
+}
+
+```
+
+
+e se não tivessemos rotulado `nomesCategoria`? como obtê-los em tempo de execução?
+```c
+
+char **extrairCategorias(Livro *l, totalLivros, int *outCount) {
+    char **nomesCategorias = NULL;
+    int qtd = 0;
+
+    for (int i = 0; i < totalLivros; i++) {
+        char *atual = l[i].categoria;
+        bool achou = false;
+
+        for (int j = 0; j < qtd; j++) {
+            if (strcmp(atual, nomesCategorias[j]) == 0) {
+                achou = true;
+                break
+            }
+        }
+
+        if (!achou) {
+            char **temp = realloc(nomesCategorias, (qtd + 1) *sizeof(char*));
+            if (!temp) {
+                printf("não foi possível realocar memória");
+                return;
+            }
+
+            nomesCategorias = temp;
+            nomesCategorias[qtd] = malloc(strlen(atual) + 1);
+            strcpy(nomesCategorias[qtd], atual);
+            qtd++;
+        }
+    }
+    outCount = qtd;
+    return nomesCategorias;
 }
 
 ```

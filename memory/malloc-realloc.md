@@ -37,7 +37,6 @@
 
 ### **nível 3 – casos mistos com realloc (desafiador)**
 
---!
 7. **crie um sistema de listas dinâmicas em 2D:**
    * comece com uma matriz `n x m` inicial.
    * o usuário pode:
@@ -46,16 +45,15 @@
      * adicionar colunas em uma linha específica (`realloc` do ponteiro interno).
    * sempre que a matriz mudar, imprima o novo estado.
 
-8. **Faça um programa que simule um "editor de pixels":**
-
-   * Cada pixel é um número inteiro.
-   * Comece com uma matriz 2x2.
-   * O usuário pode:
-
-     * Inserir novas linhas ou colunas.
-     * Alterar valores de pixels.
-     * Remover linhas ou colunas com `realloc`.
-   * Exiba sempre o estado atual.
+--!
+8. **faça um programa que simule um "editor de pixels":**
+   * cada pixel é um número inteiro.
+   * comece com uma matriz 2x2.
+   * o usuário pode:
+     * inserir novas linhas ou colunas.
+     * alterar valores de pixels.
+     * remover linhas ou colunas com `realloc`.
+   * exiba sempre o estado atual.
 
 ---
 

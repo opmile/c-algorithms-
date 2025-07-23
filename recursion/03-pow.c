@@ -19,7 +19,7 @@ int pot(int a, int b) {
     return a * pot(a, b - 1);
 }
 /* 
-* versão recursão bácisa (linear) - funciona, mas tem complexidade O(b) o que não se torna eficiente para expoentes grandes
+* versão recursão básica (linear) - funciona, mas tem complexidade O(b) o que não se torna ineficiente para expoentes grandes
 
 * otimização: exponentiation by squaring - reduz o número de chamadas para O(log b)
 a^b = 
@@ -28,8 +28,9 @@ a^b =
 isso implica usar quadrado ao invés de multiplicação em cadeia, o que reduz o problema pela metade a cada chamada recursiva (log)
 
 * a = 2, b = 5
+
 otimizada:
-2^5 = 2 * (2^2)^2
+2^5 = 2 * 2^2 * 2^2 = 2 * (2^2)^2 
      = 2 * (4)^2
      = 2 * 16 = 32
 

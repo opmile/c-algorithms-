@@ -11,20 +11,24 @@ seq =
                     ...
 
 construiremos uma função que recebe como parâmetro a posição p e retorna o número naquela posição
+f(5) = 3 -> 3 é o número que ocupa a posicao 5
+f(8) = 13 -> 13 é o número que ocupa a posição 8
 
 casos base:
 * se p == 1 (primeiro elemento na sequencia) -> retorna 0
 * se p == 2 (segundo elemento na sequencia) -> retona 1
-aqui construimos os casos mínimos (os dois primeiros elmentos)
+aqui construimos os casos mínimos (os dois primeiros elementos)
 
 caso normal: (chamada recursiva)
-a função deve retornar a soma dos dois números anterioes da sequencia
+a função deve retornar a soma dos dois números anterioes da sequência
 ex) f(3) + f(4) = f(5)
 ex) f(1) + f(2) = f(3)
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
+// comparativo com contagem de chamadas recursivas
 int count;
 int countOt;
 

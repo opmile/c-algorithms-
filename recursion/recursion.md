@@ -1,43 +1,29 @@
-### Recursão em C — Do Básico ao Avançado**
+### Recursão em C
 
-#### AQUECIMENTO – Fundamentos e Fixação
+#### AQUECIMENTO – fundamentos e fixação
 
-#### 1. **Fatorial Recursivo**
-
-> Clássico dos clássicos.
+#### 1. **fatorial recursivo**
+> clássico dos clássicos.
 > `int fatorial(int n)` — sem laços, só com chamadas recursivas.
 
----
+#### 2. **soma recursiva de vetor**
+> dado um vetor de inteiros, some todos os elementos recursivamente.
+> protótipo: `int soma(int *vet, int tamanho)`
 
-#### 2. **Soma Recursiva de Vetor**
+#### 3. **potência com Recursão**
+> calcule `a^b` sem usar `pow()` e sem laços.
+> otimize para dividir pela metade quando possível (`a^b = (a^(b/2))^2`)
 
-> Dado um vetor de inteiros, some todos os elementos recursivamente.
-> Protótipo: `int soma(int *vet, int tamanho)`
+#### 4. **fibonacci com recursão**
+> não apenas calcule o n-ésimo termo, mas **conte quantas chamadas recursivas ocorrem**.
+> ajuda a entender a complexidade **explosiva** da recursão ingênua.
 
----
+#### 5. **imprimir vetor ao contrário**
+> dado um vetor, imprima seus elementos **na ordem inversa**, usando recursão.
+> nada de índices invertidos — a recursão faz o trabalho.
 
-#### 3. **Potência com Recursão**
 
-> Calcule `a^b` sem usar `pow()` e sem laços.
-> Otimize para dividir pela metade quando possível (`a^b = (a^(b/2))^2`)
-
----
-
-#### 4. **Fibonacci com Recursão**
-
-> Não apenas calcule o n-ésimo termo, mas **conte quantas chamadas recursivas ocorrem**.
-> Ajuda a entender a complexidade **explosiva** da recursão ingênua.
-
----
-
-#### 5. **Imprimir Vetor ao Contrário**
-
-> Dado um vetor, imprima seus elementos **na ordem inversa**, usando recursão.
-> Nada de índices invertidos — a recursão faz o trabalho.
-
----
-
-#### 🚀 NÍVEL INTERMEDIÁRIO – Aplicando em Strings, Arrays e Algoritmos
+#### NÍVEL INTERMEDIÁRIO – aplicando em strings, arrays e algoritmos
 
 ---
 

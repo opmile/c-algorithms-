@@ -77,7 +77,8 @@ decompor o vetor até o tamanho ser 0 (caso base), e ir somando elemento por ele
 
 arr[0] é o primeiro elemento da "visão atual" do vetor: elemento atual que está sendo somado naquele nível da recursão
 pense em arr como uma janela móvel que enxerga apenas um pedaço do vetor original
-a cada chamada recursiva:
+
+a cada passo recursiva:
 * a função pega o primeiro valor visível (vet[0])
 * e chama recursivamente a mesma função para o resto do vetor (vet + 1)
 */

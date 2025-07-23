@@ -111,11 +111,10 @@ void calculteAvg(int **system, int students, int* numGrades) {
     }
 }
 
-void addGrade(int **system, int student, int* numGrades, int newGrades) {
+void addGrade(int **system, int student, int *numGrades, int newGrades) {
     int totalGrades = numGrades[student] + newGrades;
 
     system[student] = realloc(system[student], totalGrades * sizeof(int));
-
     if (system[student] == NULL) {
         perror("erro ao alocar memória");
         return;
@@ -130,10 +129,11 @@ void addGrade(int **system, int student, int* numGrades, int newGrades) {
 }
 
 /*
-o vetor auxiliar numGrades
+o vetor auxiliar numGrades:
+
 ele é a chave para que o sistema funcione quando cada aluno pode ter uma quantidade diferente de notas - especialmente depois de você usar realloc() para adicionar novas notas a alunos individualmente
 
-é simplemene um vetor de inteiros que armazena, para cada aluno, quantas notas ele tem atualmente
+é simplesmente um vetor de inteiros que armazena, para cada aluno, quantas notas ele tem atualmente
 
 se lembre que C não guarda quantos elementos tem cada vetor de alunos (system[i]) - ele só te da o ponteiro
 

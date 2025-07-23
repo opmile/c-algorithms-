@@ -11,13 +11,10 @@
 
 ---
 
-### **1. Agrupamento de Filmes por Gênero**
-
-> Crie uma função que recebe um vetor de `struct Filme { char titulo[50]; char genero[30]; }`
-> Agrupe os filmes por gênero, como foi feito com os livros.
-
-* Use struct `Genero` com:
-
+### **1. agrupamento de filmes por gênero**
+> crie uma função que recebe um vetor de `struct Filme { char titulo[50]; char genero[30]; }`
+> agrupe os filmes por gênero, como foi feito com os livros anteriormente.
+* use struct `Genero` com:
   ```c
   typedef struct {
       char nome[30];
@@ -26,16 +23,12 @@
   } Genero;
   ```
 
-✅ **Igual ao dos livros**, mas ajuda a treinar em outro contexto com nome diferente.
-
 ---
 
-### **2. Contagem de Tipos de Animais**
-
-> Dado um vetor de `struct Animal { char especie[30]; char nome[50]; }`,
+### **2. contagem de tipos de animais**
+> dado um vetor de `struct Animal { char especie[30]; char nome[50]; }`,
 > conte quantos animais de cada espécie existem.
-
-* Use `struct Especie { char nome[30]; int qtd; }`.
+* use `struct Especie { char nome[30]; int qtd; }`.
 * A cada novo animal:
 
   * se a espécie já estiver no vetor, `++qtd`
@@ -45,12 +38,10 @@
 
 ---
 
-### **3. Agrupar Alunos por Curso**
-
-> Receba um vetor de `struct Aluno { char nome[50]; char curso[40]; }`
-> Agrupe os alunos por curso (tipo Ciência da Computação, Direito, etc).
-
-* Use struct `Curso`:
+### **3. agrupar alunos por curso**
+> receba um vetor de `struct Aluno { char nome[50]; char curso[40]; }`
+> agrupe os alunos por curso (tipo Ciência da Computação, Direito, etc).
+* use struct `Curso`:
 
   ```c
   typedef struct {
@@ -59,8 +50,6 @@
       int qtd;
   } Curso;
   ```
-
-✅ Ajuda a enxergar **essa lógica aplicada em contexto real acadêmico** (que você conhece bem).
 
 ---
 
