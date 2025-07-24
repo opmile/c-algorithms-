@@ -27,32 +27,29 @@
 
 #### 4. **agrupamento por categoria**
 > dado um vetor de `struct Livro { char titulo[50]; char categoria[30]; }`, separe os livros por categoria em diferentes vetores.
-> Exemplo: livros de “ficção” num vetor, “biografia” em outro etc.
+> exemplo: livros de “ficção” num vetor, “biografia” em outro etc.
 > **Pede: lógica de agrupamento + comparação entre strings.**
 
 ---
 
-#### 5. **Atualização de Campo com Ponteiros**
-
-> Crie uma função que recebe um ponteiro para `struct Conta { char titular[50]; float saldo; }` e um valor.
-> A função deve aplicar um “bônus” no saldo de 10% se o valor passado for maior que 1000.
-> Serve pra praticar acesso a campos via ponteiros + lógica condicional.
+#### 5. **atualização de campo com ponteiros**
+> crie uma função que recebe um ponteiro para `struct Conta { char titular[50]; float saldo; }` e um valor.
+> a função deve aplicar um “bônus” no saldo de 10% se o valor passado for maior que 1000.
+> serve pra praticar acesso a campos via ponteiros + lógica condicional.
 
 ---
 
-#### 6. **Struct com Vetor Interno de Inteiros**
-
-> Crie uma `struct Aluno` que tem um nome e um vetor de 5 notas.
-> Escreva uma função que calcula a média das notas e retorna se o aluno foi aprovado.
+#### 6. **struct com vetor interno de inteiros**
+> crie uma `struct Aluno` que tem um nome e um vetor de 5 notas.
+> escreva uma função que calcula a média das notas e retorna se o aluno foi aprovado.
 > **Bônus:** permita que o vetor de notas seja alocado dinamicamente.
 
 ---
 
-#### 7. **Struct com Ponteiro para Outro Struct**
-
-> Crie duas structs: `struct Departamento` e `struct Funcionario`, onde o `Funcionario` tem um ponteiro para o `Departamento`.
-> Simule a associação entre eles e imprima os dados do funcionário junto com o nome do departamento.
-> Esse é excelente pra entender **relacionamentos entre structs**.
+#### 7. **struct com ponteiro para outro struct**
+> crie duas structs: `struct Departamento` e `struct Funcionario`, onde o `Funcionario` tem um ponteiro para o `Departamento`.
+> simule a associação entre eles e imprima os dados do funcionário junto com o nome do departamento.
+> esse é excelente pra entender **relacionamentos entre structs**.
 
 ---
 

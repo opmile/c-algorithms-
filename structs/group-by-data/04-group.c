@@ -108,8 +108,8 @@ void agruparPorCurso(Aluno *a, int totalAlunos) {
                     printf("não foi possível realocar memória");
                     return;
                 }
-
                 cursos[j].alunos = temp;
+                
                 cursos[j].alunos[pos] = a[i];
                 cursos[j].qtd++;
                 break;

@@ -3,7 +3,7 @@
 
 void addGrade(int **system, int student, int* numGrades, int newGrades);
 
-void calculteAvg(int **system, int strudes, int* numGrades);
+void calculteAvg(int **system, int students, int* numGrades);
 
 void printSystem(int **system, int students, int* numGrades);
 

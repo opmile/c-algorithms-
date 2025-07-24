@@ -53,31 +53,23 @@
 
 ---
 
-### **4. Contar Palavras Iniciadas com Mesma Letra**
-
-> Dada uma string longa, conte quantas palavras começam com cada letra do alfabeto (A-Z, case insensitive).
-
-* Use algo como:
-
+### **4. contar palavras iniciadas com mesma letra**
+> dada uma string longa, conte quantas palavras começam com cada letra do alfabeto (A-Z, case insensitive).
+* use algo como:
   ```c
   typedef struct {
       char letra;
       int freq;
   } LetraFreq;
   ```
-
-* Transforme primeira letra em `toupper(token[0])` e contabilize.
-
-✅ Fixação de `strtok`, comparação e vetores de structs que crescem conforme necessário.
+* transforme primeira letra em `toupper(token[0])` e contabilize.
 
 ---
 
-### **5. Agrupar Produtos por Marca**
-
-> Receba `struct Produto { char nome[50]; char marca[40]; }`
-> Agrupe por marca — ou seja, todos os produtos da “Nike”, da “Apple”, etc.
-
-* Struct `Marca` com:
+### **5. agrupar produtos por marca**
+> receba `struct Produto { char nome[50]; char marca[40]; }`
+> agrupe por marca — ou seja, todos os produtos da “Nike”, da “Apple”, etc.
+* struct `Marca` com:
 
   ```c
   typedef struct {
@@ -87,7 +79,3 @@
   } Marca;
   ```
 
-repete padrão de agrupamento com realocação e `strcmp`, ajuda a deixar automático.
-
----
-Você também pode transformar isso num repositório temático de **agrupamento e análise de dados em C** – seria um diferencial de respeito no seu GitHub. Quer ajuda pra montar isso?

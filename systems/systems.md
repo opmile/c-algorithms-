@@ -133,10 +133,4 @@ Projete um sistema com:
 
 ✅ *Reforce tudo:* Structs aninhados, ponteiros para structs, vetores dinâmicos, lógica condicional, `malloc`, `free`, e organização modular (coloque funções em outro arquivo se quiser ir além).
 
----
 
-Se quiser, posso organizar esses exercícios por dias, com um plano intensivo de 7, 10 ou 14 dias.
-
-Quer o gabarito de algum? Ou prefere quebrar a cabeça e me chamar pra revisar depois?
-
-Tô aqui contigo até o fim do intensivão 💪
