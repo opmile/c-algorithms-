@@ -11,7 +11,7 @@
    * Saída esperada: `[1, 2, 3, 4]`
    * Desafio: preserve a ordem original.
 
-3. **Mesclar dois arrays ordenados em um novo array também ordenado**
+3. **Interpolar dois arrays ordenados em um novo array também ordenado**
 
    * Ideal para treinar merge de merge sort.
    * Exemplo: `[1, 3, 5] + [2, 4, 6] → [1, 2, 3, 4, 5, 6]`.
@@ -19,7 +19,6 @@
 4. **Calcular a frequência de cada número em um array**
 
    * Exemplo: `[1,1,2,3,2,1,4] → 1:3, 2:2, 3:1, 4:1`
-   * Tenta fazer **sem usar `struct` ou ponteiros** primeiro.
 
 5. **Substituir todos os elementos negativos de um array por 0**
 

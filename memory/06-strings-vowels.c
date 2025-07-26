@@ -12,24 +12,21 @@ void toLowerCase(char *name, int len);
 
 
 int main() {
-    char **names = malloc(MAX_NOMES * sizeof(char*));
-
+    char **names = malloc(MAX_NOMES * sizeof(char*)); // cria array de strings
     if (names == NULL) {
-        perror("erro ao locar memória");
+        perror("erro ao alocar memória");
         return 1;
     }
 
-    for (int i = 0; i < MAX_NOMES; i++) {
-        names[i] = malloc(TAM_NOME * sizeof(char));
-
+    for (int i = 0; i < MAX_NOMES; i++) { // para cada nome no array
+        names[i] = malloc(TAM_NOME * sizeof(char)); // aloca memória para o nome
         if (names[i] == NULL) {
-            perror("erro ao locar memória");
+            perror("erro ao alocar memória");
             return 1;
         }
 
-        printf("digite um nome: ");
+        printf("digite um nome: "); // extrai o nome do usuário
         fgets(names[i], TAM_NOME, stdin);
-
         names[i][strcspn(names[i], "\n")] = '\0';
     }
 

@@ -9,7 +9,7 @@
 ```c
 typedef struct {
     char texto[50];
-    int fre1;
+    int freq;
 } Palavra;
 ```
 4. usar um vetor dinâmico de `Palavra` para armazenar as palavras únicas
@@ -72,7 +72,7 @@ void contarPalavras(const char *frase) {
         }
 
         if (!found) {
-            char *temp = realoc(vetor, (tamanho + 1) * sizeof(Palavra));
+            Palavra *temp = realoc(vetor, (tamanho + 1) * sizeof(Palavra));
             if (!temp) {
                 printf("não foi possível realocar memória");
                 free(copia);

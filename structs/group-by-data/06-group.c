@@ -69,7 +69,7 @@ char **extrairMarcas(Produto *p, int totalProdutos, int *outCount) {
         }
     }
 
-    *outCount = qtd;
+    *outCount = qtd; // preencher o valor do ponteiro em seu endereço
     return nomesMarcas;
 }
 
