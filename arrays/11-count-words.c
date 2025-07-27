@@ -67,7 +67,7 @@ void contarPalavras(char *str) {
 1. declarações
 * count - contador de ocorrências da palavra (incrementado toda vez que acharmos correspondência)
 * lenPalavra - o comprimento da palavra que estamos buscando
-* i - ponteiro que percorre a frase do início ao fim
+* i - ponteiro que percorre cada caractere da frase do início ao fim
 
 2. loop principal - percorre cada caractere da frase
 enquanto a o elemento apontado por i na frase for diferente do terminador nulo (isto é, enquanto a string for válida)

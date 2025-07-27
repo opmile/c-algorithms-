@@ -8,7 +8,7 @@ dada uma string, queremos
 ex) "  abc" -> pulamos os espaços iniciais até chegar no 'a'
 * isspace() é uma função de <ctype.h> e verifica se o caractere é espaço, tab, quebra de linha etc.
 
-2. começamos a copir para o início da string
+2. começamos a copiar para o início da string
 usamos duas variáveis:
 * i -> percorre toda a string original (leitor)
 * j -> constrói a nova string, limpando os espaços (escritor)
@@ -20,6 +20,7 @@ a cada caractere:
 
 3. depois do loop, verificamos se a string terminou com espaço
 ex) "abc   " -> o espaço no final é desnecessário, então o tiramos
+* se terminou com espaço, ajustamos o ponteiro j para apontar justamente para onde o terminador nulo deve ser inserido
 
 4. finalizamos com o caractere nulo \0
 * isso marca o fim da nova string, limpinha
@@ -38,10 +39,11 @@ void removeEspacosDuplicadosCompleta(char *str) {
     while(str[i] != '\0' && str[i] == ' ') { // -> while (str[i] && str[i] == ' ')
         i++; // avança enquanto encontrar espaços no início
     }
+    // j espera em sua posição original para a escrita
 
     // enquanto não chegar no fim da string
-    while (str[i] != '\0') { // se o caractere atual não é um espaço -> == while (str[i])
-        if (str[i] != ' ') { // se o caractere atual for diferente de vazio
+    while (str[i] != '\0') { // -> == while (str[i])
+        if (str[i] != ' ') { // se o caractere atual for diferente de espaço
         str[j] = str[i]; // copia o caractere
         j++; // avança o índice de escrita
         ultimoEspacoFoiAdicionado = false; // o último caractere adicionado NÃO foi espaço
@@ -70,7 +72,7 @@ durante a copia dos caracteres, estamos reescrevendo a string original no própr
 * se não foi adicionado um espaço anterior, j é incrementado
 * então str[j - 1] é o último caractere que foi escrito
 * é esperado que, ao final da iteração (str[i] != '\0'), i aponta para o terminador nulo e j aponta para a próxima posição disponível de escrita
-    * se o último caractere válido que escrevemos foi uma letra -> str[j] será a posição do \0
+    * se o último caractere válido que escrevemos foi uma letra -> str[j] será a posição do \0 porque foi foi incrementado no bloco
     * se o último caractere válido que escrevemos foi um espaço indesejado ao final -> esse caractere terá sido escrito em str[j - 1]
 * enquanto isso, i já percorreu toda a string original, e está apontando para \0
 

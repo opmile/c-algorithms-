@@ -37,9 +37,9 @@ void shiftZeros1(int *arr, int len) {
 
 /*
 2 - uma travessia - tempo O(n), espaço O(1)
-muito similar com a ideia de duas travessias, mas agora para eliminar a necessidade de mais uma travessia para preencher com os zeros, implementamos a ideia de troca
+muito similar com a ideia de duas travessias, mas agora para eliminar a necessidade de mais uma travessia para preencher com os zeros, implementamos a ideia de troca entre os elementos
 * ainda temos o ponteiros de escrita (pos) que armazena a quantidade de números diferentes de zero até o momento e que realiza a sobrescrita de um elemento para aquela posição
-* percorrendo o array em uma travessia, o elemnto atual i será checado
+* percorrendo o array em uma travessia, o elemento atual i será checado
     * se o elemento atual i for diferente de zero, trocamos ele com pos
     * se o elemento atual i for igual a zero, nenhuma troca será feita
  vai garantir que, se tivermos algum zero em arr[pos], ele será empurrado para o fim do array e não será sobrescrito

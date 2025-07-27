@@ -25,24 +25,14 @@
 
 #### NÍVEL INTERMEDIÁRIO – aplicando em strings, arrays e algoritmos
 
----
+#### 6. **string [alíndromo com recursão**
+> verifique se uma `char*` é um palíndromo, comparando primeiro e último caractere, avançando recursivamente.
 
-#### 6. **String Palíndromo com Recursão**
+#### 7. **busca linear recursiva**
+> dado um array de inteiros e um valor `x`, retorne o índice da primeira ocorrência.
 
-> Verifique se uma `char*` é um palíndromo, comparando primeiro e último caractere, avançando recursivamente.
-
----
-
-#### 7. **Busca Linear Recursiva**
-
-> Dado um array de inteiros e um valor `x`, retorne o índice da primeira ocorrência.
-> Protótipo: `int buscar(int *vet, int tamanho, int x)`
-
----
-
-#### 8. **Contar Ocorrências de um Número**
-
-> Conte quantas vezes um valor aparece em um vetor.
+#### 8. **contar ocorrências de um número**
+> conte quantas vezes um valor aparece em um vetor.
 > Bônus: retorne todos os índices onde aparece, usando ponteiro duplo.
 
 ---
