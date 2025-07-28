@@ -25,7 +25,7 @@
 
 #### NÍVEL INTERMEDIÁRIO – aplicando em strings, arrays e algoritmos
 
-#### 6. **string [alíndromo com recursão**
+#### 6. **string palíndromo com recursão**
 > verifique se uma `char*` é um palíndromo, comparando primeiro e último caractere, avançando recursivamente.
 
 #### 7. **busca linear recursiva**
@@ -37,21 +37,19 @@
 
 ---
 
-#### 9. **Substituir Letras em uma String**
-
-> Recursivamente percorra uma string substituindo todas as ocorrências de uma letra por outra.
+#### 9. **substituir letras em uma string**
+> recursivamente percorra uma string substituindo todas as ocorrências de uma letra por outra.
 > Exemplo: `'banana'` com `'a' → 'x'` → `'bxnxnx'`
 
 ---
 
-#### 10. **Soma Diagonal Recursiva de Matriz**
-
-> Receba uma matriz quadrada `n x n` e retorne a soma da diagonal principal, usando chamada recursiva com os índices.
+#### 10. **soma siagonal recursiva de matriz**
+> receba uma matriz quadrada `n x n` e retorne a soma da diagonal principal, usando chamada recursiva com os índices.
 > `soma(matriz, i)` → soma elemento `matriz[i][i]` até `i == n`
 
 ---
 
-#### 🧩 AVANÇADO – Criatividade, Backtracking e Combinações
+#### AVANÇADO – criatividade, backtracking e combinações
 
 ---
 

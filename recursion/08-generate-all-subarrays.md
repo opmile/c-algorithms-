@@ -54,7 +54,7 @@ void gerarSubarrays(int *array, int n, int ***subarrays, int **tamanhos, int *to
     // alocar vetor de ponteiros para cada subarray
     *subarrays = (int**)malloc((*total) * sizeof(int*));
     // alocar vetor de inteiros para indicar o tamanho de cada subarray
-    *tamanhos = (int*)malloc((*total) * sizeof(int*));
+    *tamanhos = (int*)((*total) * sizeof(int*));
 
     int index = 0; // controla cada subarray
 
@@ -105,6 +105,105 @@ int main() {
     
     liberarSubarrays(subarrays, tamanhos, total);
 
+    return 0;
+}
+```
+
+criando uma função simplificada, que não retorna `void` mas que retorna o próprio ponteiro para os subarrays
+```c
+int **gerarSubarrays(int *array, int n, int **tamanhos, int *total_subarrays) {
+    int total = n * (n+1) / 2;
+
+    int **subarrays = (int **)malloc(total * sizeof(int*));
+    *tamanhos = (int *)malloc(total * sizeof(int));
+
+    int index = 0;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i; i < n; j++) {
+            int len = j - i + 1;
+
+            subarrays[index] = (int)malloc(len * sizeof(int));
+            tamanhos[index] = len;
+
+            for (int k = 0; k < len; k++) {
+                subarrays[index][k] = arrays[i + k];
+            }
+
+            index++;
+        }
+    }
+
+    *total_subarrays = total;
+    return subarrays;
+}
+
+int main() {
+    int array[] = {1, 2, 3};
+    int n = sizeof(array) / sizeof(array[0]);
+
+    int *tamanhos;
+    int total;
+    int **subarrays = gerarSubarrays(array, n, &tamanhos, &total);
+
+    for (int i = 0; i < total; i++) {
+        for (int j = 0; j < tamanho[i]; j++) {
+            printf("%d ", subarrays[i][j]);
+        }
+    }
+    
+    return 0;
+}
+```
+
+adaptando para struct `Subarrays { int *dados; int tamanhos; }`
+```c
+typedef struct {
+    int *dados;
+    int tamanhos;
+} Subarrays;
+
+Subarrays *gerarSubarrays(int *array, int n, int *total_subarrays) {
+    int total = n * (n + 1) / 2;
+    Subarrays *subarrays = malloc(total * sizeof(Subarrays));
+
+    int index = 0;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            int len = j - i + 1;
+
+            subarrays[index].dados = malloc(len * sizeof(int));
+            subarrays[index].tamanhos = len;
+
+            for (int k = 0; k < len; k++) {
+                subarrays[index].dados[k] = arrays[i + k];
+            }
+
+            index++
+        }
+    }
+
+    *total_subarrays = total;
+    return subarrays
+}
+
+int main() {
+    int array[] = {1, 2, 3};
+    int n = sizeof(array) / sizeof(array[0]);
+
+    int total;
+    Subarrays *subarrays = gerarSubarrays(arrays, n, &total);
+
+    for (int i = 0; i < total; i++) {
+        for (int j = 0; j < subarrays[i].tamanhos; j++) {
+            printf("%d ", subarrays[i].dados[j]);
+        }
+        printf("\n");
+        free(subarrays[i]);
+    }
+    free(subarrays);
+    
     return 0;
 }
 ```

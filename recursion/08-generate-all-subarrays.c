@@ -3,7 +3,7 @@
 
 /*
 para resolver esse exercícios, precisamos partir do entendimento que o total de subarrays gerados em um array n elementos corresposta a:
-Σ(n-i) = n + (n-1) + (n-2) + ... + 1 = n * (n-1)/2
+Σ(n-i) = n + (n-1) + (n-2) + ... + 1 = n * (n+1)/2
 isso porque para cada possível índice inicial i temos n-i possíveis subarays começando daqui
 
 1. força bruta - usando ponteiros i, j e k
@@ -60,7 +60,6 @@ int main() {
     int arr[] = {1, 2, 3};
     generateSubarrays1(arr, 3);
 
-    int **matriz = 
 
     return 0;
 }
