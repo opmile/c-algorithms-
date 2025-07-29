@@ -53,17 +53,14 @@
 
 ---
 
-#### 8. **Ordenação de Structs**
-
-> Dado um vetor de `struct Pessoa { char nome[50]; int idade; }`, ordene as pessoas por idade de forma crescente.
-> Use `qsort` ou escreva sua própria função de ordenação com `strcmp` e lógica personalizada.
+#### 8. **ordenação de structs**
+> dado um vetor de `struct Pessoa { char nome[50]; int idade; }`, ordene as pessoas por idade de forma crescente
+> use `qsort` ou escreva seu próprio algoritmo de ordenação com `strcmp` e lógica personalizada
 
 ---
 
-#### 9. **Remoção de Elemento de um Vetor de Structs**
-
-> Escreva uma função que remove um aluno específico (por nome) de um vetor de `struct Aluno`, realocando dinamicamente para manter a integridade.
-> **Toque importante:** deslocamento + `realloc`.
+#### 9. **remoção de elemento de um vetor de structs**
+> escreva uma função que remove um aluno específico (por nome) de um vetor de `struct Aluno`, realocando dinamicamente para manter a integridade
 
 ---
 

@@ -182,7 +182,7 @@ char **extrairCategorias(Livro *l, totalLivros, int *outCount) {
         for (int j = 0; j < qtd; j++) {
             if (strcmp(atual, nomesCategorias[j]) == 0) {
                 achou = true;
-                break
+                break;
             }
         }
 
@@ -204,3 +204,10 @@ char **extrairCategorias(Livro *l, totalLivros, int *outCount) {
 }
 
 ```
+* inicializamos nosso vetor de `nomesCategorias` e o de quantidades `qtd`
+* para cada livro dentro do nosso vetor de livros, temos que analisar correspondência entre o livro atual e cada uma das categorias já registradas dentro do nosso vetor de `nomesCategoria`
+* se acharmos correspondência, significa que a categoria do livro atual já foi registrada no nosso vetor de categorias únicas
+* caso contrário, precisamos registrar essa categoria no nosso vetor de categorias únicas. para isso, realocamos a memória desse vetor para caber a quantidade atual + 1 slot
+* depois de realocar, temos um vetor de categorias preenchidas e um ponteiro qualquer. esse ponteiro corresponde ao último ponteiro adicionado, temos que alocar espaço na memória para que ele se encaixe exatamente no tamanho do nome da categoria do livro atual + 1 slot (do terminador nulo)
+* agora que temos espaço suficiente pra ele, copiamos (strcpy como é uma string) o nome da categoria do livro atual para o slot exato (que ocupa a última posição qtd) do vetor de categorias
+* por fim, precisaremos da contagem que se refere ao tamanho do vetor de categorias, e para isso, recebemos como parâmetro o endereço de um valor inteiro. ao final de todas as iterações, teremos armazenado em `qtd` a quantidade exata de categorias, e daí só resta fazer a atribuição entre as duas variáveis
