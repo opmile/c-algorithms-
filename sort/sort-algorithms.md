@@ -60,42 +60,6 @@
 
 ---
 
-## 🟣 COMBO MISTO — Para pensar como numa prova de domínio
 
-### 🟣 Situação 1 — Lib ou implementação?
 
-**Você recebe um array de 10.000 elementos. Precisa ordená-lo rapidamente.**
 
-> 🧠 O que você faz?
-> ❗ Justifique o uso do `qsort` e **não** implemente bubble sort aqui.
-
----
-
-### 🟣 Situação 2 — "Sem biblioteca!"
-
-**Você recebe a seguinte questão:**
-“Implemente um algoritmo que ordene um array de até 50 números inteiros sem usar nenhuma função da biblioteca padrão C, como `qsort` ou `strcmp`.”
-
-> 🧠 Você implementa o **bubble sort** e faz uma **função de comparação de strings** manual, se necessário.
-
----
-
-### 🟣 Situação 3 — Reutilizando código
-
-Dado um vetor de `struct Produto` com `char nome[20]`, `float preco`, implemente:
-
-* A ordenação por preço crescente usando `qsort`.
-* A ordenação por nome **usando bubble sort** com `strcmp`.
-
----
-
-## 🎓 Extras com toque de criatividade
-
-* **Crie uma função genérica `meu_qsort` que funcione parecido com `qsort`, mas que só ordene `int[]`.**
-* **Implemente `bubble_sort_reverse` que aceita uma flag para inverter o sentido da ordenação.**
-* **Compare o desempenho do bubble sort com o qsort num array de 1000 elementos.**
-
----
-
-Se quiser, posso te entregar a **resolução comentada de cada exercício**, ou preparar uma **prova simulada** com enunciados longos e orientações bem no estilo de avaliação.
-Quer seguir por esse caminho?

@@ -70,7 +70,6 @@
    * Exemplo: prefixo `"pro"` → encontra `"programar"`, `"prova"`, etc.
 
 3. **Reverter cada palavra em uma string, mantendo a ordem**
-
    * Entrada: `"sou estudante de C"`
    * Saída: `"uos etnadutse ed C"`
 

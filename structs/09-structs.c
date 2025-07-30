@@ -7,7 +7,7 @@
 
 typedef struct {
     char nome[MAX_NOME];
-    float nota;
+    int nota;
 } Aluno;
 
 /*
@@ -21,31 +21,30 @@ typedef struct {
 
 * obs: a variável tamanho n deve ser passada como ponteiro, isso porque não queremos passar o valor (cópia) mas fazer a modificação perdurar fora da função, e por isso passamos por referência
 */
-
-Aluno *removerAluno(Aluno *alunos, int *n, int idx) {
+Aluno *removerAlunoPorNome(Aluno *alunos, int *n, const char* nomeAluno) {
+    bool found = false;
     int i;
 
-    bool found = false;
     for (i = 0; i < *n; i++) {
-        if (alunos[i] == alunos[idx]) {
+        if (strcmp(alunos[i].nome, nomeAluno) == 0) {
             found = true;
             break;
         }
     }
 
     if (!found) {
-        printf("não achamos esse aluno na base de dados");
+        printf("esse aluno não existe na base de dados");
         return NULL;
     }
 
-    for (int j = i; j < *n - 1; j++) { // -1 para não acessar elemento fora do índice
+    for (int j = i; j < *n - 1; j++) {
         alunos[j] = alunos[j + 1];
     }
 
     (*n)--;
-    Aluno *temp = realloc(alunos, (*n) * sizeof(Aluno));
+    Aluno *temp = realloc(alunos, *n * sizeof(Aluno));
     if (!temp && *n > 0) {
-        perror("erro ao realocar");
+        printf("erro ao realocar memória para alunos");
         exit(1);
     }
     alunos = temp;
@@ -66,7 +65,55 @@ se a realocação faz virar vetor = realloc (vetor, 0), e essa realocação reto
     se *n == 0 e novo_vetor == NULL, é esperado, não precisa tratar como falha
 */
 
-int main() {
+void imprimir(Aluno *alunos, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%s - %d\n", alunos[i].nome, alunos[i].nota);
+    }
+}
 
+int main() {
+    int n = 6;
+    Aluno *alunos = malloc(n * sizeof(Aluno));
+    if (!alunos) {
+        perror("impossível criar vetor de alunos!");
+        return 1;
+    }
+
+    alunos[0] = (Aluno){
+        .nome = "milena",
+        .nota = 10
+    };
+
+    alunos[1] = (Aluno){
+        .nome = "joão",
+        .nota = 8
+    };
+
+    alunos[2] = (Aluno){
+        .nome = "pedro",
+        .nota = 7
+    };
+
+    alunos[3] = (Aluno){
+        .nome = "carlos",
+        .nota = 2
+    };
+
+    alunos[4] = (Aluno){
+        .nome = "ana",
+        .nota = 9
+    };
+
+    alunos[5] = (Aluno){
+        .nome = "bruna",
+        .nota = 5
+    };
+
+    imprimir(alunos, n);
+
+    removerAlunoPorNome(alunos, &n, "carlos");
+
+    imprimir(alunos, n);
+    
     return 0;
 }

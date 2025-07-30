@@ -64,24 +64,21 @@
 
 ---
 
-#### 10. **Struct Aninhada com Média**
-
+#### 10. **struct aninhada com média**
 > `struct Curso` possui um vetor de `struct Aluno`, cada aluno tem vetor de notas.
-> Escreva uma função que calcule a média geral do curso com base nas médias dos alunos.
-> **Reforça acesso em profundidade**: `curso.alunos[i].notas[j]`
+> escreva uma função que calcule a média geral do curso com base nas médias dos alunos.
+> **reforça acesso em profundidade**: `curso.alunos[i].notas[j]`
 
 ---
 
-#### 11. **Busca de Substring em Vetor de Structs**
-
-> Dado um vetor de `struct Livro { char titulo[100]; }`, encontre todos os livros que contêm a palavra “algoritmo” no título.
-> Sem `strstr` — apenas ponteiros e lógica manual de substring.
+#### 11. **busca de substring em vetor de structs**
+> dado um vetor de `struct Livro { char titulo[100]; }`, encontre todos os livros que contêm a palavra “algoritmo” no título.
+> sem `strstr` — apenas ponteiros e lógica manual de substring.
 
 ---
 
-#### 12. **Comparação de Campos com Ponteiros**
-
-> Dado dois ponteiros para `struct Data { int dia, mes, ano; }`, escreva uma função que retorna:
+#### 12. **comparação de campos com ponteiros**
+> dado dois ponteiros para `struct Data { int dia, mes, ano; }`, escreva uma função que retorna:
 >
 > * 0 se são iguais
 > * -1 se a primeira é anterior
@@ -90,11 +87,10 @@
 
 ---
 
-#### 13. **Structs em Forma de Lista Linear**
-
-> Simule manualmente uma lista encadeada de `struct Elemento`, onde cada `Elemento` aponta para o próximo.
-> Faça uma função que insere no final e uma que imprime todos os elementos.
-> Sem usar `typedef struct Node*` — só com ponteiro explícito.
+#### 13. **structs em forma de lista linear**
+> simule manualmente uma lista encadeada de `struct Elemento`, onde cada `Elemento` aponta para o próximo.
+> faça uma função que insere no final e uma que imprime todos os elementos.
+> sem usar `typedef struct Node*` — só com ponteiro explícito.
 
 ---
 
