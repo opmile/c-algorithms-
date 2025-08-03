@@ -36,7 +36,7 @@ void removeEspacosDuplicadosCompleta(char *str) {
     bool ultimoEspacoFoiAdicionado = false; // indica se o último caractere adicionado foi um espaço
 
     // pular espaços iniciais
-    while(str[i] != '\0' && str[i] == ' ') { // -> while (str[i] && str[i] == ' ')
+    while(str[i] == ' ') { // -> while (str[i] && str[i] == ' ')
         i++; // avança enquanto encontrar espaços no início
     }
     // j espera em sua posição original para a escrita
@@ -82,11 +82,10 @@ essa linha:
 * se verdadeiro ele recua uma posição, apontando agora para um caractere não nulo
 */
 
-void removeEspacosDuplicadosEnxuta(chr *str) {
+void removeEspacosDuplicadosEnxuta(char *str) {
     int i, j;
     i = 0;
     j = 0;
-    espacoAdicionado = false;
 
     // ignorar espaços no começo
     while (isspace(str[i])) {
@@ -107,7 +106,7 @@ void removeEspacosDuplicadosEnxuta(chr *str) {
         }
     }
 
-    if (j > 0 && str[j - 1] = ' ') {
+    if (j > 0 && str[j - 1] == ' ') {
         j--;
     }
     str[j] = '\0';

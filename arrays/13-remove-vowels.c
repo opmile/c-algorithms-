@@ -27,7 +27,8 @@ char *removeVowels(char *str) {
     }
     str[pos] = '\0';
 
-    char *temp = relloc(str, (pos + 1) * sizeof(char)); 
+    // cppcheck-suppress cstyleCast
+    char *temp = (char*)realloc(str, pos);
     if (!temp) return NULL;
     str = temp;
 

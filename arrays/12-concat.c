@@ -11,11 +11,13 @@ void toUpper(char *str) {
 char *toCamelCase(char *str) {
     int len = strlen(str) + 1;
 
-    char *copy = malloc(len);
+    // cppcheck-suppress cstyleCast
+    char *copy = (char*)malloc(len);
     if (!copy) return NULL;
     strcpy(copy, str);
 
-    char *result = malloc(len * 2);
+    // cppcheck-suppress cstyleCast
+    char *result = (char*)malloc(len * 2);
     if (!result) {
         free(copy);
         return NULL;
@@ -24,7 +26,7 @@ char *toCamelCase(char *str) {
 
     char *token = strtok(copy, " \n");
 
-    int first = true;
+    bool first = true;
     while (token) {
         if (first) {
             strcat(result, token);

@@ -1,4 +1,4 @@
-#include <stdio.h>  
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
@@ -13,18 +13,19 @@ typedef struct {
     int freq;
 } Palavra;
 
-void contarPalavras(char *str) {
+void contarPalavras(const char *str) {
     Palavra *array = NULL; // vetor para armazenar as palavras únicas
     int len = 0;
 
-    char *copy = malloc(strlen(str) + 1);
+    // cppcheck-suppress cstyleCast
+    char *copy = (char*)malloc(strlen(str) + 1);
     if (!copy) {
         printf("impossível realizar cópia do texto");
         return;
     }
     strcpy(copy, str);
 
-    char *token = strtok(copy, " \n");
+    const char *token = strtok(copy, " \n");
 
     while (token != NULL) {
         
@@ -38,7 +39,8 @@ void contarPalavras(char *str) {
         }
 
         if (!found) {
-            Palavra *temp = realloc(array, (len + 1) * sizeof(Palavra));
+            // cppcheck-suppress cstyleCast
+            Palavra *temp = (Palavra*)realloc(array, (len + 1) * sizeof(Palavra));
             if (!temp) {
                 printf("não foi possível adicionar nova palavra");
                 return;
@@ -70,7 +72,7 @@ void contarPalavras(char *str) {
 * i - ponteiro que percorre cada caractere da frase do início ao fim
 
 2. loop principal - percorre cada caractere da frase
-enquanto a o elemento apontado por i na frase for diferente do terminador nulo (isto é, enquanto a string for válida)
+enquanto o elemento apontado por i na frase for diferente do terminador nulo (isto é, enquanto a string for válida)
 * em cada posição da frase, vamos verificar se a palavra começa ali
 * deve ocorrer incrementação manual de i ao final do loop
 
@@ -119,19 +121,22 @@ int contarPalavra(char *str, char *substr) {
             j++; // se começa, começa a verificação incrementando j
         }
 
-        // ao final da verificação j deve ser igual ao comprimento da string
+        // ao final da verificação, j deve ser igual ao comprimento da substring
         if (j == lenSubstring) {
-            char last = (i == 0) ? ' ' : str[i - 1];
-            char next = str[i + j];
 
+            char last = (i == 0) ? ' ' : str[i - 1];
             if (isspace(last) || ispunct(last)) {
+
+                char next = str[i + j];
                 if (isspace(next) || ispunct(next) || next == '\0') {
                     count++;
                 }
             }
         }
+        
         i++;
     }
+    return count;
 }
 
 int main() {

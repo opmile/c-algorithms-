@@ -48,7 +48,7 @@ critério secundário -- usa a lógica já conhecida com strcmp
 * se < 0 -> p1 vem antes -- não troca!
 * se der zero, nomes são iguais -- não faz nada
 */
-int comparaPessoas(Pessoa *p1, Pessoa *p2) {
+int comparaPessoas(const Pessoa *p1, const Pessoa *p2) {
     if (p1->idade != p2->idade) {
         return p1->idade - p2->idade; // critério primario
     } else {
@@ -59,7 +59,7 @@ int comparaPessoas(Pessoa *p1, Pessoa *p2) {
 void bubbleSort(Pessoa *p, int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - 1 - i; j++) {
-            if (comparaPessoas(p[j], p[j + 1]) > 0) { // significa que atendeu a algum dos critérios
+            if (comparaPessoas(&p[j], &p[j + 1]) > 0) { // significa que atendeu a algum dos critérios
                 Pessoa temp = p[j];
                 p[j] = p[j + 1];
                 p[j + 1] = temp;
@@ -92,7 +92,5 @@ int main() {
     bubbleSortString(pessoas, n);
     imprimir(pessoas, n);
 
-    
-    
     return 0;
 }

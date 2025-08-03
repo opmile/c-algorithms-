@@ -20,7 +20,7 @@ bool contemPalavra(const char *frase, const char *palavra) {
             return true;
         }
 
-        p1++
+        p1++;
     }
 
     return false;
